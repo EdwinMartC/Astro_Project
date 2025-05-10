@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NavBar from "../../components/NavBar.astro";
+const {title, description} = Astro.props;
+---
+
+<BaseLayout title = "Preguntas Frecuentes"
+description = "Las preguntas más concurridas">
+<h1>FAQ</h1>
+<div>
+    Texto de ejemplo *Markdown* para:
+    - Listas
+    - con
+    - item
+
+    **Negrita** , *cuersiva*...
+
+    1) Listas
+    2) con
+    3) orden     
+</div>
+<NavBar></NavBar>  
+</BaseLayout>
