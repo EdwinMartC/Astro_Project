@@ -4,12 +4,22 @@ import NavBar from "../components/NavBar.astro";
 import Sticker from "../components/sticker.astro";
 import stickers from "../data/stickers.json";
 import AstroHeart from "../components/AstroHeart.astro";
+//import purpleCube from "../assets/purpleCube.gif";
 ---
 <style>
+	@font-face {
+		font-family: Dancing Script;
+		src: url("fonts/DancingScript-vf.ttf") format("truetype");
+	}
+
 	.stickers-collections{
 		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
+	}
+
+	h1{
+		font-family: Dancing Script;
 	}
 </style>
 
@@ -25,6 +35,7 @@ import AstroHeart from "../components/AstroHeart.astro";
 	<div class="stickers-collections">
 		{stickers.map(sticker => <Sticker data = {sticker}></Sticker>)}
 	</div>
+	<img src="src/assets/purpleCube.gif" alt="purple cube" style="width: 80px; heigth: 80px;">
 	<AstroHeart heart="💞"></AstroHeart>
 	<NavBar></NavBar>
 </BaseLayout>
