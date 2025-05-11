@@ -1,9 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/NavBar.astro";
+import Sticker from "../components/sticker.astro";
+import stickers from "../data/stickers.json";
+import AstroHeart from "../components/AstroHeart.astro";
 ---
+<style>
+	.stickers-collections{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+</style>
+
+<script>
+	import confetti from 'canvas-confetti';
+	const button = document.querySelector("[data-celebrate-button]");
+	button?.addEventListener('click', () =>confetti());
+</script>
+
 <BaseLayout title="Página Principal" description="Pagina de Incio">
 	<h1>Astro</h1>
+	<button data-celebrate-button>Celebrate!</button>
+	<div class="stickers-collections">
+		{stickers.map(sticker => <Sticker data = {sticker}></Sticker>)}
+	</div>
+	<AstroHeart heart="💞"></AstroHeart>
 	<NavBar></NavBar>
 </BaseLayout>
 

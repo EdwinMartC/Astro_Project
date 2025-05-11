@@ -1,0 +1,32 @@
+[
+    {
+        "name": "BatmanZ",
+        "url": "https://manz.dev/assets/stickers/batmanz.gif",
+        "category": "Superhero"
+    },
+    {
+        "name": "Sonic",
+        "url": "https://manz.dev/assets/stickers/sonic.png",
+        "category": "hero"
+    },
+    {
+        "name": "ManzNaruto",
+        "url": "https://manz.dev/assets/stickers/manz-naruto.png",
+        "category": "Streamer"
+    },
+    {
+        "name": "ManzRio",
+        "url": "https://manz.dev/assets/stickers/super-manzrio.png",
+        "category": "Hero"
+    },
+    {
+        "name": "ManzDraw",
+        "url": "https://manz.dev/assets/stickers/manz-dibujando.gif",
+        "category": "Streamer"
+    },
+    {
+        "name": "Ash",
+        "url": "https://manz.dev/assets/stickers/ash.png",
+        "category": "Player"
+    }
+]

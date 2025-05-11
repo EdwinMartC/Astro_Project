@@ -1,5 +1,6 @@
 ---
 const {title, description} = Astro.props;
+//console.log("Mensaje se ejecuta en el servidor")
 ---
 
 <html lang="es">
@@ -9,12 +10,16 @@ const {title, description} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
+		<link rel="stylesheet" href="/styles/index.css">
 		<title>{title}</title>
 	</head>
-	<style>
+	<script>
+		console.log("Mensaje se ejecuta en el cliente");
+	</script>
+<!--<style is:global>
 		body{
 			background-color: black;
-		    color: #fff;	
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		}
 
         h1{
@@ -25,8 +30,15 @@ const {title, description} = Astro.props;
 			color: aquamarine;
             font-size: 1.3 rem;
 		}
-	</style>
+	</style>--> 
+	<!-- Se importa el estilo css
+	 	import "../styles/index.css" 						dentro de la ruta src (relativa/actual)
+		<link rel="stylesheet" href="/styles/nombre.css">	dentro de la ruta (public)/styles-->
 	<body>
-        <slot></slot>
+        <slot>Sin contenido 
+			<img src="https://manz.dev/assets/stickers/manztrix.gif" 
+				alt="ManzTrix"
+				style="image-rendering: pixelated; width: 180px;">
+		</slot>	<!--    ""<|---Para el BaseLayout correspondiente"      -->
 	</body>
 </html>
